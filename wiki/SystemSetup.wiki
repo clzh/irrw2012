@@ -9,6 +9,11 @@ We use ROS fuerte on a Ubuntu 12.04 machine. To be able to make the most of the 
 == ROS Setup ==
 
  * We need to install ROS. Very detailed instructions for that are available [http://www.ros.org/wiki/fuerte/Installation/Ubuntu here]
+ * After installation, open a new terminal and try to use a ROS command:
+{{{
+roscd
+}}}
+If this complains about "ROS_WORKSPACE", the installation worked.
 
 
 == Repository Setup ==
