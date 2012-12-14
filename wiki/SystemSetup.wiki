@@ -8,7 +8,7 @@ We use ROS fuerte on a Ubuntu 12.04 machine. To be able to make the most of the 
 
 == ROS Setup ==
 
- * We need to install ROS. Very detailed instructions for that are available [http://www.ros.org/wiki/fuerte/Installation/Ubuntu here]
+ * ROS needs to be installed. Very detailed instructions for that are available [http://www.ros.org/wiki/fuerte/Installation/Ubuntu here]
  * After installation, open a new terminal and try to use a ROS command:
 {{{
 roscd
@@ -17,3 +17,6 @@ roscd
 
 
 == Repository Setup ==
+
+ * To use some existing software, we need to check out software from different repositories. These are:
+  * [http://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu darmstadt ros pkg] (svn)
