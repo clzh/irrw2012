@@ -1,0 +1,14 @@
+#summary Basic ROS System Installation
+
+= Introduction =
+
+We use ROS fuerte on a Ubuntu 12.04 machine. To be able to make the most of the workshop you should set it up like described. You can also use a virtual machine, but this might not work well with some of the ROS visualization tools.
+
+= Details =
+
+== ROS Setup ==
+
+ * We need to install ROS. Very detailed instructions for that are available [http://www.ros.org/wiki/fuerte/Installation/Ubuntu here]
+
+
+== Repository Setup ==
