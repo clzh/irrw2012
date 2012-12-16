@@ -34,6 +34,6 @@ sudo chown $USER repositories
   * Check out the used repositories:
 {{{
 cd repositories
-svn co http://irrw2012.googlecode.com/svn/trunk/ irr2012
+svn co http://irrw2012.googlecode.com/svn/trunk/ irrw2012
 svn co http://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu-darmstadt-ros-pkg
 }}}
