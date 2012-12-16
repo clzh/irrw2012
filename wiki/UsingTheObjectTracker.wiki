@@ -1,4 +1,4 @@
-#summary Mapping victims and QR codes using the object_tracker
+#summary Mapping victims and QR codes using the object_tracker package
 
 = Introduction =
 
