@@ -1,0 +1,14 @@
+#summary How to use Hector SLAM
+
+= Introduction =
+
+Add your content here.
+
+= Using Hector SLAM with pre-recorded data =
+
+ * Using the data logging functionality built into ROS, logfiles can be processed. A tutorial on how to do this is available on ros.org: [http://www.ros.org/wiki/hector_slam/Tutorials/MappingUsingLoggedData How to build a Map Using Logged Data]
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
