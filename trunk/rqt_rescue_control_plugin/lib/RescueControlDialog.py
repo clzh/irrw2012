@@ -1,10 +1,5 @@
 import os
 
-
-#from python_qt_binding import QtGui, loadUi
-
-
-#from  qt_gui.qt_binding_helper import loadUi
 from python_qt_binding.QtCore import QEvent, QObject, Qt, QTimer, Signal, Slot
 from python_qt_binding.QtGui import QWidget, QPushButton, QHBoxLayout, QVBoxLayout, QLabel
 
@@ -56,7 +51,6 @@ class RescueControlDialog(QObject):
         self._syscommand_pub.publish(tmp)
         
         
-    @Slot()
     def on_add_victim_in_front_of_robot_pressed(self):
             
         try:
@@ -85,21 +79,9 @@ class RescueControlDialog(QObject):
             #self._publish_answer()
             
         except rospy.ServiceException, e:
+	    #@TODO: Make this more expressive
 	    print("service call failed")
   
         
         
-    #Stuff below needed for rqt_gui, do not edit (unless you know what you're doing)           
-    def _unregisterPublisher(self):
-        if self._publisher is not None:
-            self._publisher.unregister()
-            self._publisher = None
-            
-    def _unregisterSubscriber(self):
-        if self._subscriber is not None:
-            self._subscriber.unregister()
-            self._subscriber = None
 
-    def shutdown_plugin(self):
-        self._unregisterPublisher()
-        self._unregisterSubscriber()
