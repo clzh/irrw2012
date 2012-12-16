@@ -1,0 +1,11 @@
+<library path="lib">
+  <class name="RescueControlDialog" type="RescueControlDialog.RescueControlDialog" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      A example Python GUI plugin to perform tasks commonly required in RoboCup Rescue scenarios (resetting system, adding victim positions etc.)
+    </description>
+    <qtgui>
+      <label>Rescue Control Dialog</label>
+      <statustip>A Python GUI plugin to control basic Rescue Robot functionality.</statustip>
+    </qtgui>
+  </class>
+</library>
