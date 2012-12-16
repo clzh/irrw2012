@@ -1,13 +1,13 @@
 <package>
-  <description brief="rqt_gui_rescue_control_plugin">
+  <description brief="rqt_rescue_control_plugin">
 
-     rqt_gui_rescue_control_plugin
+     rqt_rescue_control_plugin
 
   </description>
   <author>Stefan Kohlbrecher</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/rqt_gui_rescue_control_plugin</url>
+  <url>http://ros.org/wiki/rqt_rescue_control_plugin</url>
   
   <depend package="rqt_gui"/>
   <depend package="rqt_gui_py"/>
@@ -15,7 +15,7 @@
   <depend package="worldmodel_msgs"/>
 
   <export>
-    <rqt_gui plugin="${prefix}/rqt_gui_rescue_control_plugin.xml"/>
+    <rqt_gui plugin="${prefix}/rqt_rescue_control_plugin.xml"/>
   </export>
 
 </package>

@@ -1,11 +1,15 @@
 import os
 
-from  qt_gui.qt_binding_helper import loadUi
-from QtCore import QEvent, QObject, Qt, QTimer, Signal, Slot
-from QtGui import QWidget, QPushButton, QHBoxLayout, QVBoxLayout, QLabel
+
+#from python_qt_binding import QtGui, loadUi
+
+
+#from  qt_gui.qt_binding_helper import loadUi
+from python_qt_binding.QtCore import QEvent, QObject, Qt, QTimer, Signal, Slot
+from python_qt_binding.QtGui import QWidget, QPushButton, QHBoxLayout, QVBoxLayout, QLabel
 
 import roslib
-roslib.load_manifest('rqt_gui_rescue_control_plugin')
+roslib.load_manifest('rqt_rescue_control_plugin')
 import rospy
 
 from std_msgs.msg import String
@@ -74,16 +78,15 @@ class RescueControlDialog(QObject):
             
             status_msg = "added Victim, id = "
             status_msg += resp.object.info.object_id
-            self._write_message(status_msg)
+            print(status_msg)
             
-            self._task_id = resp.object.info.object_id
-            self._victimAnswer = VictimAnswer.CONFIRM
-            self._publish_answer()
+            #self._task_id = resp.object.info.object_id
+            #self._victimAnswer = VictimAnswer.CONFIRM
+            #self._publish_answer()
             
         except rospy.ServiceException, e:
-            err_msg = "error: "
-            err_msg += str(e)
-            self._write_message(err_msg)     
+	    print("service call failed")
+  
         
         
     #Stuff below needed for rqt_gui, do not edit (unless you know what you're doing)           

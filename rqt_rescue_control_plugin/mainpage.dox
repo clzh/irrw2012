@@ -2,7 +2,7 @@
 \mainpage
 \htmlinclude manifest.html
 
-\b rqt_gui_rescue_control_plugin 
+\b rqt_rescue_control_plugin 
 
 <!-- 
 Provide an overview of your package.
