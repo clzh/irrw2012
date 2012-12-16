@@ -2,12 +2,9 @@
 
 = Introduction =
 
-Add your content here.
-
+The [http://ros.org/wiki/object_tracker object_tracker] package provides tracking of objects of interest such as victims and QR codes.
 
 = Details =
+Objects can be added using either a topic based interface (in case of continuously incoming percepts, for example from a thermal camera) or via services. We concentrate on the service based interface in this tutorial.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+The most important service is [http://ros.org/doc/fuerte/api/worldmodel_msgs/html/srv/AddObject.html AddObject]. An example of it being used in a [http://ros.org/wiki/rqt_gui rqt_gui] based dialog plugin is available [https://code.google.com/p/irrw2012/source/browse/trunk/rqt_rescue_control_plugin/lib/RescueControlDialog.py#59 here].
