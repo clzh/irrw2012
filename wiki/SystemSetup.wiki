@@ -37,3 +37,11 @@ cd repositories
 svn co http://irrw2012.googlecode.com/svn/trunk/ irrw2012
 svn co http://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu-darmstadt-ros-pkg
 }}}
+  * Add the 'repositories' directory to the ROS_PACKAGE_PATH, so ROS "knows it". This is done by adding a line to your '~/.bashrc' file:
+{{{
+echo export ROS_PACKAGE_PATH=/opt/repositories:\$ROS_PACKAGE_PATH >> ~/.bashrc
+}}}
+  * Open a new terminal and try building hector_mapping:
+{{{
+rosmake hector_mapping
+}}}
