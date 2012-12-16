@@ -21,3 +21,13 @@ roscd
  * To use some existing software, we need to check out software from different repositories. These are:
   * [http://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu darmstadt ros pkg] (svn)
   * The repository belonging to this workshop [http://irrw2012.googlecode.com/svn/trunk/ irrw2012] (svn)
+ * We use a quick manual setup of repositories (a rosinstall based method could also be used)
+  * Enter your '/opt' directory and create a new 'repositories' directory:
+{{{
+cd /opt
+sudo mkdir repositories
+}}}
+  * Change the user rights so you have full access:
+{{{
+sudo chown $USER repositories
+}}}
