@@ -18,5 +18,6 @@ roscd
 
 == Repository Setup ==
 
- * To use some existing software, we need to check out software from different repositories. These are:
+ * To use some existing software, we need to check out software from different repositories. These are:e
   * [http://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu darmstadt ros pkg] (svn)
+  * The repository belonging to this workshop [http://irrw2012.googlecode.com/svn/trunk/ irrw2012]
