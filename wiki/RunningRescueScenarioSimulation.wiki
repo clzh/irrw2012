@@ -2,12 +2,23 @@
 
 = Introduction =
 
-Add your content here.
+This tutorial shows how to demonstrate a simulated Hector Lightweight UGV (HLUGV) in gazebo, including SLAM, mapping of objects of interest as well as optionally autonomous exploration.
 
 
 = Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+* Open a terminal, start a roscore
+{{{
+roscore
+}}}
+* Start a gazebo simulation scenario, for example
+{{{
+roslaunch hector_nist_arena_worlds thailand_robot_championship_2012_flat.launch
+}}}
+* Spawn the simulated HLUGV into the scenario:
+{{{
+roslaunch hlugv_gazebo spawn_hlugv_cam_lidar.launch
+}}}
+* Start the mapping, geotiff writing and object tracker using 
+{{{
+roslaunch hlugv_apps hlugv_worldmodel_all.launch
+}}}
