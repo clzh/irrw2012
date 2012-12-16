@@ -4,11 +4,10 @@
 
 Add your content here.
 
-= Using Hector SLAM with pre-recorded data =
+= Processing pre-recorded data =
 
  * Using the data logging functionality built into ROS, logfiles can be processed. A tutorial on how to do this is available on ros.org: [http://www.ros.org/wiki/hector_slam/Tutorials/MappingUsingLoggedData How to build a Map Using Logged Data]
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Processing live data =
+ 
+ * To process live data, a source of [http://www.ros.org/doc/api/sensor_msgs/html/msg/LaserScan.html sensor_msgs/LaserScan] messages (for example a Hokuyo LIDAR) and a [http://ros.org/wiki/tf tf-based] transform between the laser and a robot base frame has to be available.
