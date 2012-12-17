@@ -16,7 +16,7 @@ roscd
  If this complains about "ROS_WORKSPACE", the installation worked.
  * Install additional useful packages:
 {{{
-sudo apt-get install ros-fuerte-rqt
+sudo apt-get install ros-fuerte-rqt ros-fuerte-pr2-simulator
 }}}
 
 
