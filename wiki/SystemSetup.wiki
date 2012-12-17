@@ -38,8 +38,8 @@ sudo chown $USER repositories
   * Check out the used repositories:
 {{{
 cd repositories
-svn co http://irrw2012.googlecode.com/svn/trunk/ irrw2012
-svn co http://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu-darmstadt-ros-pkg
+svn co https://irrw2012.googlecode.com/svn/trunk/ irrw2012
+svn co https://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu-darmstadt-ros-pkg
 }}}
   * Add the 'repositories' directory to the ROS_PACKAGE_PATH, so ROS "knows it". This is done by adding a line to your '~/.bashrc' file:
 {{{
