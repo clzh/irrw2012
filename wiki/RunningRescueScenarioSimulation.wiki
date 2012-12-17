@@ -6,7 +6,10 @@ This tutorial shows how to demonstrate a simulated Hector Lightweight UGV (HLUGV
 
 
 = Details =
-
+ * Build the hlugv_apps package, this should result in all dependencies getting built:
+{{{
+rosmake hlugv_apps
+}}}
  * Open a terminal, start a roscore
 {{{
 roscore
