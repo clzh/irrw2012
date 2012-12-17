@@ -1,0 +1,18 @@
+<package>
+  <description brief="generic_auto_robot_description">
+
+     generic_auto_robot_description
+
+  </description>
+  <author>Stefan Kohlbrecher</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/generic_auto_robot_description</url>
+  
+  
+  <depend package="xacro"/>
+  <depend package="urdf"/>  
+
+</package>
+
+
