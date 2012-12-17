@@ -50,7 +50,7 @@ echo export ROS_PACKAGE_PATH=/opt/repositories:\$ROS_PACKAGE_PATH >> ~/.bashrc
 rosmake hector_mapping
 }}}
 
-== Updating Reposities ==
+== Updating Repositories ==
  * Enter the directory of the repository you want to update and type
 {{{
 svn up
