@@ -14,6 +14,10 @@ We use ROS fuerte on a Ubuntu 12.04 machine. To be able to make the most of the 
 roscd
 }}}
  If this complains about "ROS_WORKSPACE", the installation worked.
+ * Install additional useful packages:
+{{{
+sudo apt-get install ros-fuerte-rqt
+}}}
 
 
 == Repository Setup ==
