@@ -51,7 +51,7 @@ rosmake hector_mapping
 }}}
 
 == Updating Repositories ==
- * Enter the directory of the repository you want to update and type
+ * Use this line to update both repositories to the most recent state:
 {{{
-svn up
+svn up /opt/repositories/irrw2012/ /opt/repositories/tu-darmstadt-ros-pkg/
 }}}
