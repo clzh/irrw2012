@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<robot
+    xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+    xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+	  xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+    
+    <!-- Properties (Constants) -->
+    <xacro:property name="M_PI" value="3.14159" />
+    
+<!--    <xacro:property name="wheel_radius" value="0.063" />
+    <xacro:property name="wheel_size_y" value="0.05" />
+    <xacro:property name="wheel_offset_x" value="0.16" />
+    <xacro:property name="wheel_offset_y" value="0.155" />-->
+     <!-- half of wheel width + half of socket width + gap -->
+<!--    <xacro:property name="wheel_offset_z" value="-0.112" />-->
+     <!-- wheel_radius - socket height -->
+    
+    <xacro:macro name="generic_auto_robot_track" params="parent prefix offset_x offset_y offset_z reflect">
+        
+        <joint name="${prefix}_track_joint" type="fixed">
+            <origin xyz="${offset_x } ${offset_y * reflect} ${offset_z}" rpy="0 0 0" />
+            <parent link="${parent}" />
+            <child link="${prefix}_track_link" />
+        </joint>
+        
+        
+        
+        <link name="${prefix}_track_link">
+            <inertial>
+                <mass value="0.2" />
+                <origin xyz=" 0 0 0 " />
+                <inertia  ixx="0.00012411765597" ixy="0.0" ixz="0.0"
+                          iyy="0.00015218160428" iyz="0.0"
+                          izz="0.00011763977943" />
+            </inertial>
+            
+            <visual>
+                <origin xyz="0 0 0" rpy="${-M_PI/2} 0 0" />
+                <geometry>
+                    <mesh filename="package://generic_auto_robot_description/meshes/tracks.stl"/>
+                </geometry>
+                <material name="DarkGrey" >
+                    <color rgba="0.3 0.3 0.3 1"/>
+                </material>
+            </visual>
+            
+            <collision>
+                <origin xyz="0 0 0" rpy="${-M_PI/2} 0 0" />
+                <geometry>
+                    <mesh filename="package://generic_auto_robot_description/meshes/tracks.stl"/>
+                </geometry>
+                <material name="MTWheelColMat"/>
+            </collision>
+        </link>
+        
+        <gazebo reference="${prefix}_track_link" >
+            <mu1 value="100.0" />
+            <mu2 value="100.0" />
+            <kp  value="100000.0" />
+            <kd  value="1.0" />
+	    <material>Gazebo/Grey</material>
+        </gazebo>
+        
+    </xacro:macro>
+</robot>
+

@@ -6,6 +6,7 @@
     xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
     
     <include filename="$(find generic_auto_robot_description)/urdf/generic_auto_robot_wheel.urdf.xacro" />
+    <include filename="$(find generic_auto_robot_description)/urdf/generic_auto_robot_track.urdf.xacro" />
     
     <!-- Properties (Constants) -->
     <property name="M_PI" value="3.14159"/>
@@ -14,14 +15,14 @@
     <property name="base_size_y" value="0.12" />
     <property name="base_size_z" value="0.085" />
     
-    <property name="wheel_radius" value="0.063" />
+<!--    <property name="wheel_radius" value="0.063" />
     <property name="wheel_length" value="0.02" />
-    <property name="wheel_size_y" value="0.05" />
+    <property name="wheel_size_y" value="0.05" />-->
     
     <property name="total_width" value="0.297" />
     <!--    <property name="wheel_offset_y" value="${(total_width - wheel_size_y) / 2}" />-->
-    <property name="wheel_offset_y" value="0.12350" />
-    <property name="wheel_offset_z_from_base_link" value="-0.029500" />
+    <property name="track_offset_y" value="0.12350" />
+    <property name="track_offset_z_from_base_link" value="-0.029500" />
     
     <property name="ground_clearance" value="0.05" />
     
@@ -140,6 +141,9 @@
                 </geometry>
             </collision>
         </link>
+	
+	<generic_auto_robot_track parent="base_link" prefix="left" offset_x= "0.0" offset_y = "${track_offset_y}" offset_z = "${track_offset_z_from_base_link}" reflect="-1" />
+	<generic_auto_robot_track parent="base_link" prefix="right" offset_x= "0.0" offset_y = "${track_offset_y}" offset_z = "${track_offset_z_from_base_link}" reflect="1" />
 	
 	
 	
