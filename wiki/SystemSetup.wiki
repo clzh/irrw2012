@@ -41,6 +41,7 @@ cd repositories
 svn co https://irrw2012.googlecode.com/svn/trunk/ irrw2012
 svn co https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/ tu-darmstadt-ros-pkg
 }}}
+  Note that the second repository URL has been changed recently due to a repository structure change
   * Add the 'repositories' directory to the ROS_PACKAGE_PATH, so ROS "knows it". This is done by adding a line to your '~/.bashrc' file:
 {{{
 echo export ROS_PACKAGE_PATH=/opt/repositories:\$ROS_PACKAGE_PATH >> ~/.bashrc
