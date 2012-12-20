@@ -23,7 +23,7 @@ sudo apt-get install ros-fuerte-rqt ros-fuerte-pr2-simulator
 == Repository Setup ==
 
  * To use some existing software, we need to check out software from different repositories. These are:
-  * [http://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu darmstadt ros pkg] (svn)
+  * [http://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/ tu darmstadt ros pkg] (svn)
   * The repository belonging to this workshop [http://irrw2012.googlecode.com/svn/trunk/ irrw2012] (svn)
  * We use a quick manual setup of repositories (a rosinstall based method could also be used)
   * Enter your '/opt' directory and create a new 'repositories' directory:
@@ -39,7 +39,7 @@ sudo chown $USER repositories
 {{{
 cd repositories
 svn co https://irrw2012.googlecode.com/svn/trunk/ irrw2012
-svn co https://tu-darmstadt-ros-pkg.googlecode.com/svn/fuerte/trunk/ tu-darmstadt-ros-pkg
+svn co https://tu-darmstadt-ros-pkg.googlecode.com/svn/trunk/ tu-darmstadt-ros-pkg
 }}}
   * Add the 'repositories' directory to the ROS_PACKAGE_PATH, so ROS "knows it". This is done by adding a line to your '~/.bashrc' file:
 {{{
