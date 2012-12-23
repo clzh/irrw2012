@@ -1,0 +1,10 @@
+#summary Easily creating a GUI using rqt_gui
+
+= Introduction =
+
+This tutorial introduces how graphical user interfaces can quickly be created using [http://ros.org/wiki/rqt_gui rqt_gui]. 
+
+
+= Details =
+
+[http://ros.org/wiki/rqt_gui rqt_gui] is a GUI framework for ROS that allows the creation of dialogs using either C++ or Python. For simplicity, we use a Python example. There is a good generic tutorial on creating Python plugins available on [http://ros.org/wiki/rqt/Tutorials/Writing%20a%20Python%20Plugin ros.org]. 
