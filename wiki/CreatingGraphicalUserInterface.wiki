@@ -20,4 +20,17 @@ This tutorial introduces how graphical user interfaces can quickly be created us
 In the init function, the reset push button widget is created. The 'pressed' signal is then connected to the 'handleReset' callback (see below). The publisher for the 'syscommand' topic is created and finally the pushbutton is added to a existing vbox layout so it actually appears correctly in the GUI. 
 
 
-== Creating the callback ==
+== Creating the reset callback ==
+{{{
+    def handleReset(self):
+        tmp = String("reset")
+        self._syscommand_pub.publish(tmp)
+}}}
+In the reset callback, the message content of the String message is set to "reset" and the message is sent using the publisher created before.
+
+= Running it =
+Provided everything is installed as described in the system setup instructions, rqt_gui has the be started:
+{{{
+rosrun rqt_gui rqt_gui
+}}}
+In the 'Plugins' menu, the 'Rescue Control Dialog' can be started by selecting it. 
