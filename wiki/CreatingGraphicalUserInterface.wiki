@@ -7,4 +7,17 @@ This tutorial introduces how graphical user interfaces can quickly be created us
 
 = Details =
 
-[http://ros.org/wiki/rqt_gui rqt_gui] is a GUI framework for ROS that allows the creation of dialogs using either C++ or Python. For simplicity, we use a Python example. There is a good generic tutorial on creating Python plugins available on [http://ros.org/wiki/rqt/Tutorials/Writing%20a%20Python%20Plugin ros.org]. 
+[http://ros.org/wiki/rqt_gui rqt_gui] is a GUI framework for ROS that allows the creation of dialogs using either C++ or Python. For simplicity, we use a Python example. There is a good generic tutorial on creating Python plugins available on [http://ros.org/wiki/rqt/Tutorials/Writing%20a%20Python%20Plugin ros.org]. As an additional example, the [https://code.google.com/p/irrw2012/source/browse/trunk/rqt_rescue_control_plugin/ rqt_rescue_control_plugin] is provided in the IRRW 2012 repository. This demonstrates how you can for example send the "reset" command on the "syscommand" topic used by hector_mapping and the object_tracker to reset the state of these nodes.
+
+== Creating the reset button ==
+{{{
+        #Add a Pushbutton for resetting the system state
+        resetPushButton = QPushButton("Reset State")       
+        resetPushButton.pressed.connect(self.handleReset)
+        self._syscommand_pub = rospy.Publisher('syscommand', String)
+        vbox.addWidget(resetPushButton)
+}}}
+In the __init_ function, the reset push button widget is created. The 'pressed' signal is then connected to the 'handleReset' callback (see below). The publisher for the 'syscommand' topic is created and finally the pushbutton is added to a existing vbox layout so it actually appears correctly in the GUI. 
+
+
+== Creating the callback ==
