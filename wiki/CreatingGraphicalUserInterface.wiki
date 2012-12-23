@@ -17,7 +17,7 @@ This tutorial introduces how graphical user interfaces can quickly be created us
         self._syscommand_pub = rospy.Publisher('syscommand', String)
         vbox.addWidget(resetPushButton)
 }}}
-In the __init_ function, the reset push button widget is created. The 'pressed' signal is then connected to the 'handleReset' callback (see below). The publisher for the 'syscommand' topic is created and finally the pushbutton is added to a existing vbox layout so it actually appears correctly in the GUI. 
+In the init function, the reset push button widget is created. The 'pressed' signal is then connected to the 'handleReset' callback (see below). The publisher for the 'syscommand' topic is created and finally the pushbutton is added to a existing vbox layout so it actually appears correctly in the GUI. 
 
 
 == Creating the callback ==
