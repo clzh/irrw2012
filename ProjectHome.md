@@ -1,0 +1,1 @@
+Be sure to also check out the [Facebook page for the workshop](https://www.facebook.com/pages/IRRW-International-Robotics-Research-Workshop/314079355369814)
